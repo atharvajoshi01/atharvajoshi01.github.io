@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Atharva Joshi — Data Scientist · ML Engineer · Quant Dev</title>
+<title>Atharva Joshi · Data Scientist · ML Engineer · Quant Dev</title>
 <meta name="description" content="MS Data Science, SUNY Buffalo. Gold Medalist. ML systems for finance and AI evaluation. Open source contributor to Microsoft, Google, Goldman Sachs.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -212,7 +212,7 @@ section:nth-child(even){background:var(--bg1);}
 .dl{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.04em;}
 .org-ic{width:14px;height:14px;vertical-align:middle;margin-right:3px;flex-shrink:0;}
 
-/* SKILLS — HEX GRID */
+/* SKILLS · HEX GRID */
 .hex-section{margin-bottom:56px;}
 .hex-grid-outer{overflow:hidden;}
 .hex-rows{display:flex;flex-direction:column;gap:6px;align-items:center;}
@@ -298,13 +298,17 @@ section:nth-child(even){background:var(--bg1);}
 .cur-thumb{width:48px;height:64px;border-radius:4px;object-fit:cover;flex-shrink:0;}
 .now-p{font-family:'JetBrains Mono',monospace;font-size:9px;color:#00FF88;letter-spacing:.15em;background:rgba(0,255,136,.08);border:1px solid rgba(0,255,136,.2);padding:2px 8px;border-radius:3px;margin-left:auto;animation:np 2s ease-in-out infinite;}
 @keyframes np{0%,100%{opacity:1}50%{opacity:.4}}
-.sport-row{display:flex;gap:9px;flex-wrap:wrap;margin:18px 0;}
-.sport-t{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted2);background:var(--card);border:1px solid var(--border);padding:6px 12px;border-radius:3px;transition:all .3s!important;}
-.sport-t:hover{color:var(--accent2);border-color:rgba(255,183,0,.3);}
+.sport-row{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0;}
+.sport-card{display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted2);background:var(--card);border:1px solid var(--border);padding:6px 12px 6px 6px;border-radius:6px;transition:all .3s!important;}
+.sport-card:hover{color:var(--accent2);border-color:rgba(255,183,0,.3);transform:translateY(-1px);}
+.sport-logo{width:24px;height:24px;object-fit:contain;flex-shrink:0;}
 
-/* Chess chip */
-.chess-chip{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent2);background:var(--accent2-dim);border:1px solid rgba(255,183,0,.28);border-radius:6px;padding:8px 14px;text-decoration:none;transition:box-shadow .3s,border-color .3s!important;margin-bottom:16px;}
-.chess-chip:hover{border-color:rgba(255,183,0,.5);box-shadow:0 0 20px rgba(255,183,0,.2);}
+/* Chess links cluster */
+.chess-cluster{display:flex;align-items:center;gap:10px;margin:14px 0 18px;flex-wrap:wrap;}
+.chess-icon{font-size:22px;color:var(--accent2);}
+.chess-link{display:inline-flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent2);background:var(--accent2-dim);border:1px solid rgba(255,183,0,.28);border-radius:6px;padding:7px 12px;text-decoration:none;transition:all .3s!important;}
+.chess-link:hover{border-color:rgba(255,183,0,.55);box-shadow:0 0 14px rgba(255,183,0,.18);transform:translateY(-1px);}
+.chess-link img{width:16px;height:16px;border-radius:3px;}
 
 /* Inspirations */
 .inspo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px;}
@@ -344,8 +348,13 @@ section:nth-child(even){background:var(--bg1);}
 #resume-modal.open{display:flex;}
 .modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,0.75);backdrop-filter:blur(12px);}
 .modal-card{position:relative;z-index:1;background:var(--bg1);border:1px solid var(--border-a);border-radius:16px;padding:52px 44px;max-width:540px;width:100%;text-align:center;box-shadow:0 0 80px var(--accent-glow);animation:modal-in .4s cubic-bezier(.23,1,.32,1) forwards;}
+.resume-card{max-width:960px;width:96vw;height:90vh;padding:18px;text-align:left;display:flex;flex-direction:column;gap:14px;}
+.resume-head{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+.resume-actions{display:flex;align-items:center;gap:10px;}
+.resume-frame{flex:1;width:100%;border:1px solid var(--border);border-radius:8px;background:#1f1f23;min-height:0;}
+.resume-foot{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;}
 @keyframes modal-in{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
-.modal-close{position:absolute;top:18px;right:18px;background:none;border:1px solid var(--border);width:32px;height:32px;border-radius:50%;cursor:none;font-size:16px;color:var(--muted);display:flex;align-items:center;justify-content:center;transition:all .3s!important;}
+.modal-close{background:none;border:1px solid var(--border);width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:18px;color:var(--muted);display:flex;align-items:center;justify-content:center;transition:all .3s!important;}
 .modal-close:hover{color:var(--accent);border-color:var(--border-a);}
 .modal-mono{font-family:'Syne',sans-serif;font-weight:800;font-size:96px;line-height:1;background:linear-gradient(135deg,var(--accent),rgba(0,245,212,.5));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 32px rgba(0,245,212,.35));margin-bottom:8px;}
 [data-theme="light"] .modal-mono{background:linear-gradient(135deg,var(--accent),rgba(0,122,110,.5));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
@@ -415,22 +424,24 @@ footer{border-top:1px solid var(--border);padding:26px 40px;display:flex;align-i
 </div>
 
 <!-- RESUME MODAL -->
-<div id="resume-modal" role="dialog" aria-modal="true">
+<div id="resume-modal" role="dialog" aria-modal="true" aria-label="Resume preview">
   <div class="modal-backdrop" id="modal-bd"></div>
-  <div class="modal-card">
-    <button class="modal-close" id="modal-close" aria-label="Close">×</button>
-    <div class="modal-mono">AJ</div>
-    <div class="modal-name">ATHARVA JOSHI</div>
-    <div class="modal-sub">Data Scientist · ML Engineer · Quant Developer</div>
-    <div class="modal-pills">
-      <span class="modal-pill mp-gold">🥇 Gold Medalist</span>
-      <span class="modal-pill mp-cyan">GPA 3.73</span>
-      <span class="modal-pill mp-cyan">100k+ OSS Stars</span>
+  <div class="modal-card resume-card">
+    <div class="resume-head">
+      <div>
+        <div class="modal-name">ATHARVA JOSHI</div>
+        <div class="modal-sub">Resume · preview below, download with the button</div>
+      </div>
+      <div class="resume-actions">
+        <a href="Joshi_Atharva_CV.pdf" download="Atharva_Joshi_Resume.pdf" class="modal-btn modal-btn-p">⬇ Download PDF</a>
+        <button class="modal-close" id="modal-close" aria-label="Close">×</button>
+      </div>
     </div>
-    <div class="modal-term" id="modal-term"></div>
-    <div class="modal-btns">
-      <a href="mailto:atharvaj2112@gmail.com" class="modal-btn modal-btn-p">📧 Email Me</a>
-      <a href="https://linkedin.com/in/atharvajoshi01" target="_blank" class="modal-btn modal-btn-s">🔗 LinkedIn</a>
+    <iframe id="resume-iframe" class="resume-frame" src="" title="Resume preview"></iframe>
+    <div class="resume-foot">
+      <a href="Joshi_Atharva_CV.pdf" target="_blank" rel="noopener" class="modal-btn modal-btn-s">Open in new tab ↗</a>
+      <a href="mailto:atharvaj2112@gmail.com" class="modal-btn modal-btn-s">📧 Email</a>
+      <a href="https://linkedin.com/in/atharvajoshi01" target="_blank" rel="noopener" class="modal-btn modal-btn-s">🔗 LinkedIn</a>
     </div>
   </div>
 </div>
@@ -438,12 +449,13 @@ footer{border-top:1px solid var(--border);padding:26px 40px;display:flex;align-i
 <nav id="nav">
   <div class="nav-logo">AJ<span style="color:var(--muted)">_v3</span></div>
   <ul class="nav-links">
-    <li><a href="#projects">01 Work</a></li>
+    <li><a href="#projects">01 Projects</a></li>
     <li><a href="#opensource">02 OS</a></li>
     <li><a href="#skills">03 Stack</a></li>
-    <li><a href="#timeline">04 Journey</a></li>
-    <li><a href="#about">05 About</a></li>
-    <li><a href="#contact">06 Contact</a></li>
+    <li><a href="#experience">04 Work</a></li>
+    <li><a href="#timeline">05 Edu</a></li>
+    <li><a href="#about">06 About</a></li>
+    <li><a href="#contact">07 Contact</a></li>
   </ul>
   <div class="nav-r">
     <div class="th-tog" id="th-tog" title="Toggle theme">
@@ -465,13 +477,13 @@ footer{border-top:1px solid var(--border);padding:26px 40px;display:flex;align-i
     <div class="hero-role"><span id="tw"></span><span class="tw-cur"></span></div>
     <div class="hero-ctas">
       <a href="#projects" class="btn-p mag">View Work ↓</a>
-      <a class="btn-s mag" href="Joshi_Atharva_CV.pdf" download="Atharva_Joshi_Resume.pdf" target="_blank" rel="noopener">Resume ↓</a>
+      <button class="btn-s mag" onclick="openResume()">Resume ↗</button>
     </div>
     <div class="hero-stats">
       <div class="hs"><span>3.73</span> GPA</div><div class="hs-sep"></div>
       <div class="hs">MS <span>Data Science</span></div><div class="hs-sep"></div>
       <div class="hs">SUNY <span>Buffalo</span></div><div class="hs-sep"></div>
-      <div class="hs hs-gold">🥇 Gold Medalist · B.Tech E&amp;TC</div><div class="hs-sep"></div>
+      <div class="hs hs-gold">🥇 Gold Medalist · B.E. E&amp;TC</div><div class="hs-sep"></div>
       <div class="hs hs-chess">♞ Chess 2000</div><div class="hs-sep"></div>
       <div class="hs"><span id="sys-t">SYS TIME: --:--:-- UTC</span></div>
     </div>
@@ -482,21 +494,21 @@ footer{border-top:1px solid var(--border);padding:26px 40px;display:flex;align-i
 <!-- PROJECTS -->
 <section id="projects">
 <div class="container">
-  <div class="sec-label"><strong>01</strong> — Selected Works</div>
+  <div class="sec-label"><strong>01</strong> · Selected Works</div>
   <h2 class="sec-title" style="position:relative;">Projects That Ship<span class="sec-num">01</span></h2>
   <div class="sec-underline"></div>
   <div class="bento">
     <div class="pc fade-up">
-      <div class="term-bar"><span class="tdot r"></span><span class="tdot a"></span><span class="tdot g"></span><span class="tbar-t">~/finreg-ml — python3</span></div>
+      <div class="term-bar"><span class="tdot r"></span><span class="tdot a"></span><span class="tdot g"></span><span class="tbar-t">~/finreg-ml · python3</span></div>
       <div class="pb">
-        <div class="pnum">PROJECT_01 / 03 · FLAGSHIP</div>
+        <div class="pnum">PROJECT_01 / 05 · FLAGSHIP</div>
         <div class="pname"><span>finreg</span>-ml</div>
-        <div class="pdesc">Regulation-aware ML pipeline for finance. GovernedModel, SHAP explainability, fairness audits, EU AI Act compliance, drift detection (KS+PSI), consolidated reports. Published on PyPI. Battle-tested with 180+ tests.</div>
+        <div class="pdesc">Regulation-aware ML pipeline for finance. GovernedModel, SHAP explainability, fairness audits, EU AI Act compliance, drift detection (KS+PSI), consolidated reports. Published on PyPI.</div>
         <div class="metrics-row">
-          <div class="metric-item"><div class="metric-val">180+</div><div class="metric-lbl">Tests Passing</div></div>
-          <div class="metric-item"><div class="metric-val" style="color:var(--accent2)">v1.0.3</div><div class="metric-lbl">PyPI Published</div></div>
-          <div class="metric-item"><div class="metric-val">★ 4.8</div><div class="metric-lbl">HuggingFace</div></div>
-          <div class="metric-item"><div class="metric-val" style="color:#4ADE80">94%</div><div class="metric-lbl">Test Coverage</div></div>
+          <div class="metric-item"><div class="metric-val">46</div><div class="metric-lbl">Tests Passing</div></div>
+          <div class="metric-item"><div class="metric-val" style="color:var(--accent2)">v0.2.0</div><div class="metric-lbl">PyPI Published</div></div>
+          <div class="metric-item"><div class="metric-val">10</div><div class="metric-lbl">Modules</div></div>
+          <div class="metric-item"><div class="metric-val" style="color:#4ADE80">MIT</div><div class="metric-lbl">Open Source</div></div>
         </div>
         <div class="tags"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">SHAP</span><span class="tag tag-a">PyPI</span><span class="tag">GitHub Actions</span><span class="tag">FastAPI</span></div>
         <div class="plinks">
@@ -506,24 +518,75 @@ footer{border-top:1px solid var(--border);padding:26px 40px;display:flex;align-i
           <button class="rtog" onclick="toggleReadme(this)">View README ↓</button>
         </div>
       </div>
-      <div class="readme"><span style="color:#4ADE80"># finreg-ml</span> <span style="color:var(--muted2)">v1.0.3</span>
+      <div class="readme"><span style="color:#4ADE80"># finreg-ml</span> <span style="color:var(--muted2)">v0.2.0</span>
 
 <span style="color:var(--muted2)">$ pip install finreg-ml</span>
-<span style="color:#4ADE80">Successfully installed finreg-ml-1.0.3</span>
+<span style="color:#4ADE80">Successfully installed finreg-ml-0.2.0</span>
 
-<span style="color:var(--muted2)">$ python -c "from finreg_ml import GovernedModel; print(GovernedModel.__doc__)"</span>
+<span style="color:var(--muted2)">$ python -c "from finreg import GovernedModel; print(GovernedModel.__doc__)"</span>
 EU AI Act compliant ML pipeline with SHAP explainability,
 fairness audits, drift detection (KS + PSI), and auto-reports.
-Supports: sklearn, xgboost, lightgbm | Tests: 180+ | Coverage: 94%
+Supports: scikit-learn estimators | 10 modules | 46 tests
 
-<span style="color:var(--muted2)">$ pytest tests/ -v --tb=short</span>
-<span style="color:#4ADE80">✓ 182 passed in 4.31s</span></div>
+<span style="color:var(--muted2)">$ pytest tests/ -ra</span>
+<span style="color:#4ADE80">✓ 46 passed in 4.31s</span></div>
     </div>
 
     <div class="pc fade-up" data-d="1">
-      <div class="term-bar"><span class="tdot r"></span><span class="tdot a"></span><span class="tdot g"></span><span class="tbar-t">~/agenteval — python3</span></div>
+      <div class="term-bar"><span class="tdot r"></span><span class="tdot a"></span><span class="tdot g"></span><span class="tbar-t">~/stocksense · typescript+python</span></div>
       <div class="pb">
-        <div class="pnum">PROJECT_02 / 03</div>
+        <div class="pnum">PROJECT_02 / 05 · LIVE DEMO</div>
+        <div class="pname"><span>stock</span>sense</div>
+        <div class="pdesc">End-to-end demand forecasting and inventory health platform. HGBT + SARIMAX with walk-forward backtesting, Supabase Postgres backing realtime dashboard, PySpark feature parity. Next.js + Recharts UI deployed on Vercel.</div>
+        <div class="metrics-row">
+          <div class="metric-item"><div class="metric-val">22%</div><div class="metric-lbl">RMSE Lift</div></div>
+          <div class="metric-item"><div class="metric-val" style="color:var(--accent2)">31</div><div class="metric-lbl">Tests Passing</div></div>
+          <div class="metric-item"><div class="metric-val">12 × 2</div><div class="metric-lbl">SKU Panels</div></div>
+          <div class="metric-item"><div class="metric-val" style="color:#4ADE80">live</div><div class="metric-lbl">Realtime</div></div>
+        </div>
+        <div class="tags"><span class="tag">Python</span><span class="tag">PySpark</span><span class="tag">Next.js</span><span class="tag">Supabase</span><span class="tag tag-a">Vercel</span></div>
+        <div class="plinks">
+          <a href="https://github.com/atharvajoshi01/stocksense" target="_blank" class="plink"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>GitHub</a>
+          <a href="https://stocksense-ajoshs-projects.vercel.app" target="_blank" class="plink">Live Demo ↗</a>
+          <button class="rtog" onclick="toggleReadme(this)">View README ↓</button>
+        </div>
+      </div>
+      <div class="readme"><span style="color:#4ADE80"># stocksense</span> <span style="color:var(--muted2)">v0.1.0</span>
+
+<span style="color:var(--muted2)">$ python -m stocksense.run</span>
+→ Walk-forward CV across 24 panels · 3 folds · 14d horizon
+→ HGBT MAPE 21.9% vs Seasonal Naive 27.4%
+→ Selected HGBT on every panel · bias near zero
+<span style="color:#4ADE80">✓ 31 tests · Pandas/PySpark parity verified</span></div>
+    </div>
+
+    <div class="pc fade-up" data-d="2">
+      <div class="term-bar"><span class="tdot r"></span><span class="tdot a"></span><span class="tdot g"></span><span class="tbar-t">~/clarify · typescript</span></div>
+      <div class="pb">
+        <div class="pnum">PROJECT_03 / 05 · LIVE DEMO</div>
+        <div class="pname"><span>clar</span>ify</div>
+        <div class="pdesc">Production LLM agent that turns a free-text brief into a validated BA artifact pack. Multi-step reasoning with a self-correcting clarification loop, typed IDs, RACI matrix, traceability. Llama 3.3 70B fallback chain via OpenRouter.</div>
+        <div class="pbadges"><span class="bdg bc">LLM Agent</span><span class="bdg bg">Tool Calling</span></div>
+        <div class="tags"><span class="tag">Next.js</span><span class="tag">AI SDK</span><span class="tag">OpenRouter</span><span class="tag tag-a">Vercel</span></div>
+        <div class="plinks">
+          <a href="https://github.com/atharvajoshi01/clarify" target="_blank" class="plink"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>GitHub</a>
+          <a href="https://clarify-alpha.vercel.app" target="_blank" class="plink">Live Demo ↗</a>
+          <button class="rtog" onclick="toggleReadme(this)">View README ↓</button>
+        </div>
+      </div>
+      <div class="readme"><span style="color:#4ADE80"># clarify</span>
+
+<span style="color:var(--muted2)">$ # input: "vendor invoice approval tool"</span>
+→ Agent asks 6 clarifying questions before assuming
+→ Restates assumptions, then ships artifact pack
+→ Typed IDs (BR/SR/FR/NFR/TR/TC) · RTM · RACI register
+<span style="color:#4ADE80">✓ First-draft turnaround: ~6 hours → under 5 minutes</span></div>
+    </div>
+
+    <div class="pc fade-up" data-d="3">
+      <div class="term-bar"><span class="tdot r"></span><span class="tdot a"></span><span class="tdot g"></span><span class="tbar-t">~/agenteval · python3</span></div>
+      <div class="pb">
+        <div class="pnum">PROJECT_04 / 05</div>
         <div class="pname"><span>agent</span>eval</div>
         <div class="pdesc">AI agent evaluation framework with AgentRunner, LLM-as-judge scoring (OpenAI + Anthropic), CLI, safety checks for PII & prompt injection, multi-format export.</div>
         <div class="pbadges"><span class="bdg bc">LLM-as-judge</span><span class="bdg bg">Safety Checks</span></div>
@@ -533,20 +596,20 @@ Supports: sklearn, xgboost, lightgbm | Tests: 180+ | Coverage: 94%
           <button class="rtog" onclick="toggleReadme(this)">View README ↓</button>
         </div>
       </div>
-      <div class="readme"><span style="color:#4ADE80"># agenteval</span>
+      <div class="readme"><span style="color:#4ADE80"># agenteval</span> <span style="color:var(--muted2)">v0.2.0</span>
 
 <span style="color:var(--muted2)">$ agenteval run --agent my_agent.py --suite evals/suite.json</span>
-→ Running 24 test cases...
-→ LLM Judge: claude-3-5-sonnet (Anthropic)
-→ Safety: PII scan ✓  |  Injection scan ✓
-→ Scores: Accuracy 91.2%  |  Coherence 88.7%
-<span style="color:#4ADE80">✓ Report saved: eval_results_2025.json</span></div>
+→ Loading 11 modules · 62 tests passing
+→ LLM Judge: claude-sonnet-4 (Anthropic)
+→ Safety: PII scan ✓  ·  Injection scan ✓
+→ Export: JSON · CSV · Markdown
+<span style="color:#4ADE80">✓ Report saved: eval_results.json</span></div>
     </div>
 
-    <div class="pc fade-up" data-d="2">
-      <div class="term-bar"><span class="tdot r"></span><span class="tdot a"></span><span class="tdot g"></span><span class="tbar-t">~/crypto-stat-arb — python3</span></div>
+    <div class="pc fade-up" data-d="4">
+      <div class="term-bar"><span class="tdot r"></span><span class="tdot a"></span><span class="tdot g"></span><span class="tbar-t">~/crypto-stat-arb · python3</span></div>
       <div class="pb">
-        <div class="pnum">PROJECT_03 / 03</div>
+        <div class="pnum">PROJECT_05 / 05</div>
         <div class="pname"><span>crypto</span>-stat-arb</div>
         <div class="pdesc">Statistical arbitrage engine. Engle-Granger cointegration, Johansen basket trading, Kalman filter hedge ratios, walk-forward backtesting, regime detection, paper trading via Kraken API.</div>
         <div class="pbadges"><span class="bdg ba">Kraken API</span><span class="bdg bc">Kalman Filter</span></div>
@@ -556,13 +619,14 @@ Supports: sklearn, xgboost, lightgbm | Tests: 180+ | Coverage: 94%
           <button class="rtog" onclick="toggleReadme(this)">View README ↓</button>
         </div>
       </div>
-      <div class="readme"><span style="color:#4ADE80"># crypto-stat-arb</span>
+      <div class="readme"><span style="color:#4ADE80"># crypto-stat-arb</span> <span style="color:var(--muted2)">v0.1.0</span>
 
-<span style="color:var(--muted2)">$ python run_backtest.py --pair BTC-ETH --window 90d</span>
-→ Engle-Granger cointegration: p=0.0031 ✓
-→ Kalman hedge ratio: β=0.847
-→ Backtest Sharpe: 1.94  |  Max DD: -8.2%
-<span style="color:#4ADE80">✓ Paper trading active on Kraken sandbox</span></div>
+<span style="color:var(--muted2)">$ python -m cryptoarb.backtest --pair BTC-ETH --window 90d</span>
+→ Engle-Granger cointegration test
+→ Kalman filter hedge ratio (rolling)
+→ Walk-forward backtest · regime detection
+→ Market neutral confirmed (BTC corr ≈ 0.03)
+<span style="color:#4ADE80">✓ 107 tests · paper trading via Kraken API</span></div>
     </div>
   </div>
 </div>
@@ -571,7 +635,7 @@ Supports: sklearn, xgboost, lightgbm | Tests: 180+ | Coverage: 94%
 <!-- OPEN SOURCE -->
 <section id="opensource">
 <div class="container">
-  <div class="sec-label"><strong>02</strong> — Open Source DNA</div>
+  <div class="sec-label"><strong>02</strong> · Open Source DNA</div>
   <h2 class="sec-title" style="position:relative;">Building in Public<span class="sec-num">02</span></h2>
   <div class="sec-underline"></div>
   <div class="fade-up" style="position:relative;">
@@ -647,7 +711,7 @@ Supports: sklearn, xgboost, lightgbm | Tests: 180+ | Coverage: 94%
 <!-- SKILLS -->
 <section id="skills">
 <div class="container">
-  <div class="sec-label"><strong>03</strong> — Tech Stack</div>
+  <div class="sec-label"><strong>03</strong> · Tech Stack</div>
   <h2 class="sec-title" style="position:relative;">The Toolbox<span class="sec-num">03</span></h2>
   <div class="sec-underline"></div>
 
@@ -678,11 +742,74 @@ Supports: sklearn, xgboost, lightgbm | Tests: 180+ | Coverage: 94%
 </div>
 </section>
 
-<!-- TIMELINE / EDUCATION -->
+<!-- EXPERIENCE -->
+<section id="experience">
+<div class="container">
+  <div class="sec-label"><strong>04</strong> · Where I've Worked</div>
+  <h2 class="sec-title" style="position:relative;">Professional Experience<span class="sec-num">04</span></h2>
+  <div class="sec-underline"></div>
+  <div class="edu-cards">
+    <div class="edu-card fade-up">
+      <span class="edu-badge">Research · Buffalo, NY</span>
+      <div class="edu-inst">University at Buffalo</div>
+      <div class="edu-prog">Research Data Analyst</div>
+      <div class="edu-desc">Built data pipelines and statistical models for university research stakeholders. Combined Python and R for hypothesis testing and regression analysis, plus SQL data integration into automated reporting.</div>
+      <div class="edu-date">Oct 2025 to Apr 2026 · Buffalo, NY</div>
+      <div class="edu-scholarship">
+        <div class="edu-scholarship-lbl">★ Impact</div>
+        <div class="edu-scholarship-txt">Reduced 696-feature dataset to 80 high-signal variables (88% cut) · Integrated 3 sources into 41 production reports · Reclaimed 15+ hrs/week of stakeholder time</div>
+      </div>
+      <div class="edu-focus-lbl">Stack</div>
+      <div class="edu-focus-txt">Python, R, SQL, Statistical Analysis, Regression, Hypothesis Testing, Data Pipelines</div>
+    </div>
+    <div class="edu-card fade-up" style="border-color:rgba(0,245,212,0.12);" data-d="1">
+      <span class="edu-badge">Data Science · Buffalo, NY</span>
+      <div class="edu-inst">Machinery Monitoring Systems LLC</div>
+      <div class="edu-prog">Data Scientist</div>
+      <div class="edu-desc">Shipped a Python AI service end to end, from EDA through validation and deployment. Built model evaluation infrastructure tracking accuracy, latency, drift, and exception rate across iterative retraining cycles.</div>
+      <div class="edu-date">Aug 2025 to Dec 2025 · Buffalo, NY</div>
+      <div class="edu-scholarship">
+        <div class="edu-scholarship-lbl">★ Impact</div>
+        <div class="edu-scholarship-txt">99.98% production accuracy · Automated manual triage costing ~4 hrs/day · 3 retraining cycles sustaining 99%+ accuracy across releases</div>
+      </div>
+      <div class="edu-focus-lbl">Stack</div>
+      <div class="edu-focus-txt">Python, FastAPI, Docker, Model Evaluation, MLOps, Drift Monitoring</div>
+    </div>
+    <div class="edu-card fade-up" data-d="2">
+      <span class="edu-badge">ML Engineer · India</span>
+      <div class="edu-inst">Rucha Yantra LLP</div>
+      <div class="edu-prog">Machine Learning Engineer</div>
+      <div class="edu-desc">Designed and trained classification models on multi-sensor industrial telemetry. Built Python and SQL backend pipelines on AWS processing 10K+ daily records across multiple device classes.</div>
+      <div class="edu-date">Feb 2023 to Jul 2024 · India</div>
+      <div class="edu-scholarship">
+        <div class="edu-scholarship-lbl">★ Impact</div>
+        <div class="edu-scholarship-txt">Shipped 3 ML modules from scoping to deployment · Zero rollbacks across 17 months · ~$80K estimated annual customer cost savings</div>
+      </div>
+      <div class="edu-focus-lbl">Stack</div>
+      <div class="edu-focus-txt">Python, SQL, AWS, Classification Models, Multi-Sensor Telemetry, Industrial ML</div>
+    </div>
+    <div class="edu-card fade-up" data-d="3">
+      <span class="edu-badge">Internship · India</span>
+      <div class="edu-inst">Chandra Engineering</div>
+      <div class="edu-prog">Data Analyst Intern</div>
+      <div class="edu-desc">Trained 3 forecasting models on 12+ months of multi-product sales data using walk-forward backtesting, replacing a manual Excel workflow. Surfaced insights through Tableau dashboards for ops planning.</div>
+      <div class="edu-date">Sep 2021 to Dec 2022 · India</div>
+      <div class="edu-scholarship">
+        <div class="edu-scholarship-lbl">★ Impact</div>
+        <div class="edu-scholarship-txt">+20% forecast accuracy · -15% stock-outs · -10% overstocking · $10K annual savings · +5% on-time fulfillment</div>
+      </div>
+      <div class="edu-focus-lbl">Stack</div>
+      <div class="edu-focus-txt">Random Forest, XGBoost, TensorFlow, Python, SQL, Tableau, Walk-Forward Backtesting</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- EDUCATION -->
 <section id="timeline">
 <div class="container">
-  <div class="sec-label"><strong>04</strong> — Journey</div>
-  <h2 class="sec-title" style="position:relative;">Education &amp; Experience<span class="sec-num">04</span></h2>
+  <div class="sec-label"><strong>05</strong> · Education</div>
+  <h2 class="sec-title" style="position:relative;">Education<span class="sec-num">05</span></h2>
   <div class="sec-underline"></div>
   <div class="edu-cards">
     <div class="edu-card fade-up">
@@ -690,35 +817,21 @@ Supports: sklearn, xgboost, lightgbm | Tests: 180+ | Coverage: 94%
       <div class="edu-inst">State University of New York at Buffalo</div>
       <div class="edu-prog">MS, Data Science</div>
       <div class="edu-desc">STEM-designated Data Science program combining rigorous statistical modeling with production ML engineering, quantitative finance, and real-world systems work.</div>
-      <div class="edu-date">Aug 2024 — Expected May 2026 · Buffalo, NY</div>
+      <div class="edu-date">Aug 2024 to Dec 2025 · Buffalo, NY</div>
       <div class="edu-scholarship">
         <div class="edu-scholarship-lbl">★ Achievement</div>
-        <div class="edu-scholarship-txt">GPA 3.73 · 3 open source projects published · 11 PRs across Microsoft, Google, Goldman Sachs</div>
+        <div class="edu-scholarship-txt">GPA 3.73 · 5 open source projects · 11 PRs across Microsoft, Google, Goldman Sachs ecosystems</div>
       </div>
       <div class="edu-focus-lbl">Focus Areas</div>
       <div class="edu-focus-txt">Machine Learning, Statistical Modeling, Quantitative Finance, MLOps, AI Evaluation, Data Engineering</div>
     </div>
-    <div class="edu-card fade-up" style="border-color:rgba(0,245,212,0.12);" data-d="1">
-      <span class="edu-badge">Open Source · 100k+ ⭐</span>
-      <div class="edu-inst">Microsoft · Google · Goldman Sachs</div>
-      <div class="edu-prog">Open Source Contributor</div>
-      <div class="edu-desc">PRs across the quantitative finance and ML ecosystem — EU AI Act classifiers in Microsoft's toolkit, Pandas 2.x compat in gs-quant, security patches in tf-quant-finance.</div>
-      <div class="edu-date">2025 — Present · Remote</div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
-        <span class="chip cm">4 MERGED</span>
-        <span class="chip co">7 OPEN</span>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--accent2);background:var(--accent2-dim);border:1px solid rgba(255,183,0,.2);padding:2px 7px;border-radius:3px;">100k+ ⭐</span>
-      </div>
-      <div class="edu-focus-lbl">Repositories</div>
-      <div class="edu-focus-txt">TradingAgents (50.8k★) · gs-quant (10k★) · FinRL (14.6k★) · tf-quant-finance (5.3k★) · sktime (9.7k★)</div>
-    </div>
-    <div class="edu-card fade-up" style="border-color:rgba(255,183,0,0.2);" data-d="2">
-      <span class="edu-badge gold">B.Tech · 🥇 Gold Medalist</span>
-      <div class="edu-inst">Dr. Babasaheb Ambedkar Technological University</div>
-      <div class="edu-prog gold">B.Tech, Electronics &amp; Telecommunication Engineering</div>
-      <div class="edu-desc">Graduated as university topper with the Gold Medal — the highest academic distinction. Built the foundation in algorithms, electronics, systems, and applied mathematics.</div>
-      <div class="edu-date">Aug 2020 — Jul 2024</div>
-      <div class="edu-gold-chip">🥇 Gold Medalist · Electronics &amp; Telecom Engineering</div>
+    <div class="edu-card fade-up" style="border-color:rgba(255,183,0,0.2);" data-d="1">
+      <span class="edu-badge gold">B.E. · 🥇 Gold Medalist</span>
+      <div class="edu-inst">Jawaharlal Nehru Engineering College, India</div>
+      <div class="edu-prog gold">B.E., Electronics &amp; Telecommunication Engineering</div>
+      <div class="edu-desc">Graduated as university topper with the Gold Medal, the highest academic distinction. Built the foundation in algorithms, electronics, systems, and applied mathematics.</div>
+      <div class="edu-date">Aug 2019 to Jul 2023 · India</div>
+      <div class="edu-gold-chip">🥇 Gold Medalist · 8.41/10 GPA · Electronics &amp; Telecom</div>
       <div class="edu-focus-lbl">Focus Areas</div>
       <div class="edu-focus-txt">Algorithms, Data Structures, Signal Processing, Communication Systems, Applied Mathematics, Embedded Systems</div>
     </div>
@@ -729,20 +842,30 @@ Supports: sklearn, xgboost, lightgbm | Tests: 180+ | Coverage: 94%
 <!-- ABOUT -->
 <section id="about">
 <div class="container">
-  <div class="sec-label"><strong>05</strong> — The Human</div>
-  <h2 class="sec-title" style="position:relative;">About<span class="sec-num">05</span></h2>
+  <div class="sec-label"><strong>06</strong> · The Human</div>
+  <h2 class="sec-title" style="position:relative;">About<span class="sec-num">06</span></h2>
   <div class="sec-underline"></div>
   <div class="ab-grid">
     <div class="fade-up">
-      <p class="ab-bio">I'm a data scientist and ML engineer who builds <strong>production-grade ML systems</strong>. My work bridges statistical modeling with software engineering — from cointegration-based stat arb engines to <strong>quantitative finance</strong> pipelines. Passionate about <strong>open source</strong> — 100k+ stars contributed across Microsoft, Google, and Goldman Sachs repos.</p>
+      <p class="ab-bio">I'm a data scientist and ML engineer who builds <strong>production-grade ML systems</strong>. My work bridges statistical modeling with software engineering, from cointegration-based stat arb engines to <strong>quantitative finance</strong> pipelines. Passionate about <strong>open source</strong>, with PRs across repos at Microsoft, Google, and Goldman Sachs (100k+ combined stars).</p>
       <div class="ach-card">
         <div class="ach-ic">🥇</div>
-        <div><div class="ach-lbl">Featured Achievement</div><div class="ach-ti">Bachelor's Gold Medalist</div><div class="ach-desc">Graduated top of batch with university gold medal in B.Tech Electronics &amp; Telecommunication Engineering. A credential earned through consistent excellence, not circumstance.</div></div>
+        <div><div class="ach-lbl">Featured Achievement</div><div class="ach-ti">Bachelor's Gold Medalist</div><div class="ach-desc">Graduated top of batch with university gold medal in B.E. Electronics &amp; Telecommunication Engineering. A credential earned through consistent excellence, not circumstance.</div></div>
       </div>
       <div style="margin-top:22px;">
         <div class="sg-lbl" style="margin-bottom:12px;">// Always Supporting</div>
-        <div class="sport-row"><span class="sport-t">⚽ Man United</span><span class="sport-t">⚽ Real Madrid</span><span class="sport-t">🏏 India Cricket</span><span class="sport-t">🏈 Buffalo Bills</span></div>
-        <a href="https://lichess.org/@/aaichamulga" target="_blank" class="chess-chip">♞ National Rapid Chess Championship Candidate · Lichess 2000</a>
+        <div class="sport-row">
+          <span class="sport-card"><img src="images/teams/manutd.svg" alt="Manchester United" class="sport-logo">Man United</span>
+          <span class="sport-card"><img src="images/teams/realmadrid.svg" alt="Real Madrid" class="sport-logo">Real Madrid</span>
+          <span class="sport-card"><img src="images/teams/india-cricket.png" alt="India Cricket" class="sport-logo">India Cricket</span>
+          <span class="sport-card"><img src="images/teams/bills.svg" alt="Buffalo Bills" class="sport-logo">Buffalo Bills</span>
+        </div>
+        <div class="sg-lbl" style="margin:18px 0 8px;">// Over the Board</div>
+        <div class="chess-cluster">
+          <span class="chess-icon" title="Chess">♞</span>
+          <a href="https://www.chess.com/member/aaichamulga" target="_blank" rel="noopener" class="chess-link">chess.com / aaichamulga ↗</a>
+          <a href="https://lichess.org/@/aaichamulga" target="_blank" rel="noopener" class="chess-link">lichess / aaichamulga ↗</a>
+        </div>
       </div>
       <div class="term-w">
         <div class="term-bar"><span class="tdot r"></span><span class="tdot a"></span><span class="tdot g"></span><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);margin-left:8px;">atharva@portfolio:~</span></div>
@@ -760,16 +883,16 @@ Supports: sklearn, xgboost, lightgbm | Tests: 180+ | Coverage: 94%
       <div class="sg-lbl" style="margin-bottom:14px;text-align:center;">// Right Now</div>
       <div class="cur-cards">
         <div class="cur-card">
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7f/Me_Before_You_UK_cover.jpg/220px-Me_Before_You_UK_cover.jpg" alt="Me Before You" class="cur-thumb" loading="lazy" onerror="this.style.display='none';">
+          <img src="images/media/me-before-you.jpg" alt="Me Before You" class="cur-thumb" loading="lazy" onerror="this.style.display='none';">
           <div><div class="cur-lbl">Reading</div><div class="cur-val">Me Before You</div><div class="cur-sub">Jojo Moyes</div></div>
         </div>
         <div class="cur-card">
-          <div class="cur-ic">🎵</div>
+          <img src="images/media/the-night-we-met.jpg" alt="The Night We Met" class="cur-thumb" loading="lazy" onerror="this.style.display='none';">
           <div><div class="cur-lbl">Listening</div><div class="cur-val">The Night We Met</div><div class="cur-sub">Lord Huron</div></div>
           <div class="now-p">▶ NOW PLAYING</div>
         </div>
         <div class="cur-card">
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/32/Grave_of_the_fireflies_movie_poster.jpg/220px-Grave_of_the_fireflies_movie_poster.jpg" alt="Grave of the Fireflies" class="cur-thumb" loading="lazy" onerror="this.style.display='none';">
+          <img src="images/media/grave-of-fireflies.jpg" alt="Grave of the Fireflies" class="cur-thumb" loading="lazy" onerror="this.style.display='none';">
           <div><div class="cur-lbl">Watching</div><div class="cur-val">Grave of the Fireflies</div><div class="cur-sub">Isao Takahata · 1988</div></div>
         </div>
       </div>
@@ -777,25 +900,25 @@ Supports: sklearn, xgboost, lightgbm | Tests: 180+ | Coverage: 94%
       <div class="fuel-lbl" style="margin-top:24px;">// FUEL</div>
       <div class="inspo-grid">
         <div class="inspo-c">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/440px-Cristiano_Ronaldo_2018.jpg" alt="Cristiano Ronaldo" class="inspo-photo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <img src="images/people/ronaldo.jpg" alt="Cristiano Ronaldo" class="inspo-photo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
           <div class="inspo-photo-fb" style="display:none;">CR</div>
           <div class="inspo-n">Cristiano Ronaldo</div><div class="inspo-d">Football</div>
           <div class="inspo-q">"Hard work beats talent"</div>
         </div>
         <div class="inspo-c">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Novak_Djokovic_2019_Dubai.jpg/440px-Novak_Djokovic_2019_Dubai.jpg" alt="Novak Djokovic" class="inspo-photo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <img src="images/people/djokovic.jpg" alt="Novak Djokovic" class="inspo-photo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
           <div class="inspo-photo-fb" style="display:none;">ND</div>
           <div class="inspo-n">Novak Djokovic</div><div class="inspo-d">Tennis</div>
           <div class="inspo-q">"Believe in yourself"</div>
         </div>
         <div class="inspo-c">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Kobe_Bryant_2014.jpg/440px-Kobe_Bryant_2014.jpg" alt="Kobe Bryant" class="inspo-photo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <img src="images/people/kobe.jpg" alt="Kobe Bryant" class="inspo-photo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
           <div class="inspo-photo-fb" style="display:none;">KB</div>
           <div class="inspo-n">Kobe Bryant</div><div class="inspo-d">Basketball</div>
           <div class="inspo-q">"The details are not the details"</div>
         </div>
         <div class="inspo-c">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Bobby_Fischer_1960_in_Leipzig_in_color.jpg/440px-Bobby_Fischer_1960_in_Leipzig_in_color.jpg" alt="Bobby Fischer" class="inspo-photo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <img src="images/people/fischer.jpg" alt="Bobby Fischer" class="inspo-photo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
           <div class="inspo-photo-fb" style="display:none;">BF</div>
           <div class="inspo-n">Bobby Fischer</div><div class="inspo-d">Chess</div>
           <div class="inspo-q">"Chess is life"</div>
@@ -803,7 +926,7 @@ Supports: sklearn, xgboost, lightgbm | Tests: 180+ | Coverage: 94%
       </div>
 
       <div class="clk-card">
-        <div class="sg-lbl" style="margin-bottom:8px;">// Local Time — New York</div>
+        <div class="sg-lbl" style="margin-bottom:8px;">// Local Time · New York</div>
         <div id="ny-time"></div>
         <div id="ny-date"></div>
       </div>
@@ -815,7 +938,7 @@ Supports: sklearn, xgboost, lightgbm | Tests: 180+ | Coverage: 94%
 <!-- CONTACT -->
 <section id="contact">
 <div class="container">
-  <div class="sec-label"><strong>06</strong> — Let's Connect</div>
+  <div class="sec-label"><strong>07</strong> · Let's Connect</div>
   <div class="ct-blob"></div>
   <div class="ct-inner fade-up">
     <div class="ct-h">Let's Build Something.</div>
@@ -833,7 +956,7 @@ Supports: sklearn, xgboost, lightgbm | Tests: 180+ | Coverage: 94%
 </section>
 
 <footer>
-  <div class="fl">© 2026 <span>Atharva Joshi</span> · <em>B.Tech Gold Medalist</em> · Built with precision · Dark by default</div>
+  <div class="fl">© 2026 <span>Atharva Joshi</span> · <em>B.E. Gold Medalist</em> · Built with precision · Dark by default</div>
   <div class="fr">New York · Open to Relocation</div>
 </footer>
 
@@ -1055,30 +1178,14 @@ function copyEmail(){navigator.clipboard.writeText('atharvaj2112@gmail.com').the
 /* RESUME MODAL */
 function openResume(){
   const modal=document.getElementById('resume-modal');
+  const frame=document.getElementById('resume-iframe');
+  // Lazy-load the PDF only on first open so the page doesn't fetch it up-front.
+  if(!frame.dataset.loaded){
+    frame.src='Joshi_Atharva_CV.pdf#view=FitH&toolbar=1';
+    frame.dataset.loaded='1';
+  }
   modal.classList.add('open');
   document.body.style.overflow='hidden';
-  const term=document.getElementById('modal-term');
-  term.innerHTML='';
-  const lines=[
-    '> education: MS Data Science, SUNY Buffalo (2026)',
-    '> prev: B.Tech E&TC — Gold Medalist',
-    '> gpa: 3.73',
-    '> prs_merged: 4 | prs_open: 7',
-    '> stars_contributed: 100,000+',
-    '> pypi_packages: finreg-ml v1.0.3',
-    '> chess_rating: 2000 (Lichess)',
-    '> status: ACTIVELY_HIRING ← open',
-  ];
-  lines.forEach((line,i)=>{
-    setTimeout(()=>{
-      const div=document.createElement('div');
-      const parts=line.split(':');
-      const key=parts[0];const val=parts.slice(1).join(':');
-      div.innerHTML=`<span style="color:var(--muted)">${key}:</span><span style="color:var(--accent)">${val}</span>`;
-      div.style.marginBottom='2px';
-      term.appendChild(div);
-    },i*120);
-  });
 }
 function closeResume(){document.getElementById('resume-modal').classList.remove('open');document.body.style.overflow='';}
 document.getElementById('modal-close').addEventListener('click',closeResume);
