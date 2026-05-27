@@ -156,6 +156,30 @@ section:nth-child(even){background:var(--bg1);}
 .tdot{width:11px;height:11px;border-radius:50%;}
 .tdot.r{background:#FF5F57;}.tdot.a{background:#FEBC2E;}.tdot.g{background:#28C840;}
 .tbar-t{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.08em;margin-left:8px;}
+
+/* Project preview thumbnail */
+.preview{position:relative;background:#0a0a0d;border-bottom:1px solid var(--border);overflow:hidden;aspect-ratio:16/9;}
+.preview img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;transition:transform .6s cubic-bezier(.23,1,.32,1)!important;}
+.pc:hover .preview img{transform:scale(1.03);}
+.preview-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,0.55) 100%);opacity:0;transition:opacity .35s!important;}
+.pc:hover .preview-overlay{opacity:1;}
+.preview-btn{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:9px 16px;border-radius:4px;background:var(--accent);color:#0a0a0d;border:none;text-decoration:none;display:inline-flex;align-items:center;gap:6px;font-weight:600;cursor:pointer;transition:all .25s!important;}
+.preview-btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px var(--accent-glow);}
+.preview-btn.ghost{background:rgba(20,20,25,0.85);color:var(--fg);border:1px solid var(--border-a);backdrop-filter:blur(8px);}
+.preview-tag{position:absolute;top:12px;left:12px;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;padding:4px 9px;border-radius:3px;background:rgba(10,10,13,0.75);color:var(--accent);border:1px solid rgba(0,245,212,0.3);backdrop-filter:blur(6px);}
+.preview-tag.static{color:var(--muted2);border-color:var(--border);}
+
+/* Live demo iframe modal */
+#demo-modal{position:fixed;inset:0;z-index:2100;display:none;align-items:center;justify-content:center;padding:20px;}
+#demo-modal.open{display:flex;}
+.demo-card{position:relative;z-index:1;background:var(--bg1);border:1px solid var(--border-a);border-radius:14px;padding:14px;width:96vw;max-width:1280px;height:92vh;display:flex;flex-direction:column;gap:10px;box-shadow:0 0 80px var(--accent-glow);animation:modal-in .4s cubic-bezier(.23,1,.32,1) forwards;}
+.demo-head{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:4px 8px;}
+.demo-title{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent);letter-spacing:.06em;display:flex;align-items:center;gap:10px;}
+.demo-title .demo-live{display:inline-flex;align-items:center;gap:5px;font-size:10px;padding:3px 8px;border-radius:3px;background:rgba(74,222,128,0.12);color:#4ADE80;border:1px solid rgba(74,222,128,0.25);text-transform:uppercase;letter-spacing:.16em;}
+.demo-title .demo-live::before{content:'';width:6px;height:6px;border-radius:50%;background:#4ADE80;animation:np 1.5s ease-in-out infinite;}
+.demo-actions{display:flex;align-items:center;gap:8px;}
+.demo-frame{flex:1;width:100%;border:1px solid var(--border);border-radius:8px;background:#0a0a0d;min-height:0;}
+
 .pb{padding:28px 32px;}
 .pnum{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.2em;margin-bottom:12px;}
 .pname{font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:800;color:var(--fg);margin-bottom:10px;letter-spacing:-.02em;}
@@ -423,6 +447,21 @@ footer{border-top:1px solid var(--border);padding:26px 40px;display:flex;align-i
   <button class="fab fab-theme" id="fab-theme" aria-label="Toggle theme"><span id="fab-ic">☽</span></button>
 </div>
 
+<!-- LIVE DEMO MODAL -->
+<div id="demo-modal" role="dialog" aria-modal="true" aria-label="Live demo">
+  <div class="modal-backdrop" id="demo-bd"></div>
+  <div class="demo-card">
+    <div class="demo-head">
+      <div class="demo-title"><span id="demo-name"></span><span class="demo-live">LIVE</span></div>
+      <div class="demo-actions">
+        <a id="demo-open" href="#" target="_blank" rel="noopener" class="modal-btn modal-btn-s">Open in new tab ↗</a>
+        <button class="modal-close" id="demo-close" aria-label="Close">×</button>
+      </div>
+    </div>
+    <iframe id="demo-iframe" class="demo-frame" src="" title="Live demo" allow="clipboard-read; clipboard-write" referrerpolicy="no-referrer"></iframe>
+  </div>
+</div>
+
 <!-- RESUME MODAL -->
 <div id="resume-modal" role="dialog" aria-modal="true" aria-label="Resume preview">
   <div class="modal-backdrop" id="modal-bd"></div>
@@ -500,6 +539,14 @@ footer{border-top:1px solid var(--border);padding:26px 40px;display:flex;align-i
   <div class="bento">
     <div class="pc fade-up">
       <div class="term-bar"><span class="tdot r"></span><span class="tdot a"></span><span class="tdot g"></span><span class="tbar-t">~/finreg-ml · python3</span></div>
+      <div class="preview">
+        <img src="images/projects/finreg-ml.png" alt="finreg-ml HuggingFace demo" loading="lazy">
+        <div class="preview-tag">HuggingFace Demo</div>
+        <div class="preview-overlay">
+          <button class="preview-btn" onclick="openDemo('finreg-ml','https://aadu21-finreg-ml-demo.hf.space')">▶ Try the demo</button>
+          <a class="preview-btn ghost" href="https://huggingface.co/spaces/aadu21/finreg-ml-demo" target="_blank" rel="noopener">Open on HF ↗</a>
+        </div>
+      </div>
       <div class="pb">
         <div class="pnum">PROJECT_01 / 05 · FLAGSHIP</div>
         <div class="pname"><span>finreg</span>-ml</div>
@@ -534,6 +581,14 @@ Supports: scikit-learn estimators | 10 modules | 46 tests
 
     <div class="pc fade-up" data-d="1">
       <div class="term-bar"><span class="tdot r"></span><span class="tdot a"></span><span class="tdot g"></span><span class="tbar-t">~/stocksense · typescript+python</span></div>
+      <div class="preview">
+        <img src="images/projects/stocksense.png" alt="StockSense dashboard preview" loading="lazy">
+        <div class="preview-tag">Live Dashboard</div>
+        <div class="preview-overlay">
+          <button class="preview-btn" onclick="openDemo('stocksense','https://stocksense-ajoshs-projects.vercel.app/')">▶ Try the demo</button>
+          <a class="preview-btn ghost" href="https://stocksense-ajoshs-projects.vercel.app/" target="_blank" rel="noopener">Open in new tab ↗</a>
+        </div>
+      </div>
       <div class="pb">
         <div class="pnum">PROJECT_02 / 05 · LIVE DEMO</div>
         <div class="pname"><span>stock</span>sense</div>
@@ -562,6 +617,14 @@ Supports: scikit-learn estimators | 10 modules | 46 tests
 
     <div class="pc fade-up" data-d="2">
       <div class="term-bar"><span class="tdot r"></span><span class="tdot a"></span><span class="tdot g"></span><span class="tbar-t">~/clarify · typescript</span></div>
+      <div class="preview">
+        <img src="images/projects/clarify.png" alt="Clarify LLM agent preview" loading="lazy">
+        <div class="preview-tag">AI Agent</div>
+        <div class="preview-overlay">
+          <button class="preview-btn" onclick="openDemo('clarify','https://clarify-alpha.vercel.app/')">▶ Try the agent</button>
+          <a class="preview-btn ghost" href="https://clarify-alpha.vercel.app/" target="_blank" rel="noopener">Open in new tab ↗</a>
+        </div>
+      </div>
       <div class="pb">
         <div class="pnum">PROJECT_03 / 05 · LIVE DEMO</div>
         <div class="pname"><span>clar</span>ify</div>
@@ -585,6 +648,10 @@ Supports: scikit-learn estimators | 10 modules | 46 tests
 
     <div class="pc fade-up" data-d="3">
       <div class="term-bar"><span class="tdot r"></span><span class="tdot a"></span><span class="tdot g"></span><span class="tbar-t">~/agenteval · python3</span></div>
+      <div class="preview">
+        <img src="images/projects/agenteval.png" alt="agenteval CLI preview" loading="lazy">
+        <div class="preview-tag static">CLI Framework</div>
+      </div>
       <div class="pb">
         <div class="pnum">PROJECT_04 / 05</div>
         <div class="pname"><span>agent</span>eval</div>
@@ -608,6 +675,10 @@ Supports: scikit-learn estimators | 10 modules | 46 tests
 
     <div class="pc fade-up" data-d="4">
       <div class="term-bar"><span class="tdot r"></span><span class="tdot a"></span><span class="tdot g"></span><span class="tbar-t">~/crypto-stat-arb · python3</span></div>
+      <div class="preview">
+        <img src="images/projects/crypto-stat-arb.png" alt="crypto-stat-arb backtest preview" loading="lazy">
+        <div class="preview-tag static">Backtest Engine</div>
+      </div>
       <div class="pb">
         <div class="pnum">PROJECT_05 / 05</div>
         <div class="pname"><span>crypto</span>-stat-arb</div>
@@ -1174,6 +1245,28 @@ function copyEmail(){navigator.clipboard.writeText('atharvaj2112@gmail.com').the
   style.textContent='.hex-cell{transition:opacity 0.4s,transform 0.4s!important;}';
   document.head.appendChild(style);
 })();
+
+/* LIVE DEMO MODAL */
+function openDemo(name,url){
+  const modal=document.getElementById('demo-modal');
+  const frame=document.getElementById('demo-iframe');
+  document.getElementById('demo-name').textContent='~/'+name;
+  document.getElementById('demo-open').href=url;
+  frame.src=url;
+  modal.classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeDemo(){
+  const modal=document.getElementById('demo-modal');
+  const frame=document.getElementById('demo-iframe');
+  modal.classList.remove('open');
+  // Blank the iframe so the embedded site stops running in the background.
+  frame.src='';
+  document.body.style.overflow='';
+}
+document.getElementById('demo-close').addEventListener('click',closeDemo);
+document.getElementById('demo-bd').addEventListener('click',closeDemo);
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('demo-modal').classList.contains('open'))closeDemo();});
 
 /* RESUME MODAL */
 function openResume(){
