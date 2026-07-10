@@ -586,6 +586,35 @@ footer{border-top:1px solid var(--border);padding:26px 40px;display:flex;align-i
   <div class="sec-underline"></div>
   <div class="bento">
     <div class="pc fade-up">
+      <div class="term-bar"><span class="tdot r"></span><span class="tdot a"></span><span class="tdot g"></span><span class="tbar-t">~/eligible · python3</span></div>
+      <div class="pb">
+        <div class="pnum">PROJECT_01 / 06 · FLAGSHIP</div>
+        <div class="pname"><span>elig</span>ible</div>
+        <div class="pdesc">Patient-to-trial matching on harmonized clinical data. Harmonizes multi-source EHR into the OMOP CDM (dbt), converts free-text trial eligibility into structured logic, and runs audited agentic matching (LangGraph + DeepSeek) with per-criterion evidence. PHI redaction, RBAC, a tamper-evident audit chain, FHIR output, and a Next.js review UI.</div>
+        <div class="metrics-row">
+          <div class="metric-item"><div class="metric-val">610</div><div class="metric-lbl">Structured Criteria</div></div>
+          <div class="metric-item"><div class="metric-val" style="color:var(--accent2)">25</div><div class="metric-lbl">Tests Passing</div></div>
+          <div class="metric-item"><div class="metric-val">SHA-256</div><div class="metric-lbl">Audit Chain</div></div>
+          <div class="metric-item"><div class="metric-val" style="color:#4ADE80">MIT</div><div class="metric-lbl">Open Source</div></div>
+        </div>
+        <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">LangGraph</span><span class="tag">Pinecone</span><span class="tag">dbt</span><span class="tag tag-a">OMOP/FHIR</span><span class="tag">Next.js</span></div>
+        <div class="plinks">
+          <a href="https://github.com/atharvajoshi01/eligible" target="_blank" class="plink"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>GitHub</a>
+          <button class="rtog" onclick="toggleReadme(this)">Close README ↑</button>
+        </div>
+      </div>
+      <div class="readme open"><span style="color:#4ADE80"># eligible</span> <span style="color:var(--muted2)">patient-to-trial matching</span>
+
+<span style="color:var(--muted2)">$ make all</span>
+→ Harmonize Synthea + legacy CSV into OMOP CDM (dbt)
+→ 30 trials · 610 structured eligibility criteria
+→ Agentic match: phenotype → retrieve → adjudicate
+→ Verdict per criterion: eligible | ineligible | needs_review
+
+<span style="color:var(--muted2)">$ pytest -q</span>
+<span style="color:#4ADE80">✓ 25 passed · audit chain · PHI redaction · matching</span></div>
+    </div>
+    <div class="pc fade-up">
       <div class="term-bar"><span class="tdot r"></span><span class="tdot a"></span><span class="tdot g"></span><span class="tbar-t">~/finreg-ml · python3</span></div>
       <div class="preview">
         <img src="images/projects/finreg-ml.png" alt="finreg-ml HuggingFace demo" loading="lazy">
@@ -596,7 +625,7 @@ footer{border-top:1px solid var(--border);padding:26px 40px;display:flex;align-i
         </div>
       </div>
       <div class="pb">
-        <div class="pnum">PROJECT_01 / 05 · FLAGSHIP</div>
+        <div class="pnum">PROJECT_02 / 06 · PUBLISHED</div>
         <div class="pname"><span>finreg</span>-ml</div>
         <div class="pdesc">Regulation-aware ML pipeline for finance. GovernedModel, SHAP explainability, fairness audits, EU AI Act compliance, drift detection (KS+PSI), consolidated reports. Published on PyPI.</div>
         <div class="metrics-row">
@@ -627,42 +656,6 @@ Supports: scikit-learn estimators | 10 modules | 46 tests
 <span style="color:#4ADE80">✓ 46 passed in 4.31s</span></div>
     </div>
 
-    <div class="pc fade-up" data-d="1">
-      <div class="term-bar"><span class="tdot r"></span><span class="tdot a"></span><span class="tdot g"></span><span class="tbar-t">~/stocksense · typescript+python</span></div>
-      <div class="preview">
-        <img src="images/projects/stocksense.png" alt="StockSense dashboard preview" loading="lazy">
-        <div class="preview-tag">Live Dashboard</div>
-        <div class="preview-overlay">
-          <button class="preview-btn" onclick="openDemo('stocksense','https://stocksense-ajoshs-projects.vercel.app/')">▶ Try the demo</button>
-          <a class="preview-btn ghost" href="https://stocksense-ajoshs-projects.vercel.app/" target="_blank" rel="noopener">Open in new tab ↗</a>
-        </div>
-      </div>
-      <div class="pb">
-        <div class="pnum">PROJECT_02 / 05 · LIVE DEMO</div>
-        <div class="pname"><span>stock</span>sense</div>
-        <div class="pdesc">End-to-end demand forecasting and inventory health platform. HGBT + SARIMAX with walk-forward backtesting, Supabase Postgres backing realtime dashboard, PySpark feature parity. Next.js + Recharts UI deployed on Vercel.</div>
-        <div class="metrics-row">
-          <div class="metric-item"><div class="metric-val">22%</div><div class="metric-lbl">RMSE Lift</div></div>
-          <div class="metric-item"><div class="metric-val" style="color:var(--accent2)">31</div><div class="metric-lbl">Tests Passing</div></div>
-          <div class="metric-item"><div class="metric-val">12 × 2</div><div class="metric-lbl">SKU Panels</div></div>
-          <div class="metric-item"><div class="metric-val" style="color:#4ADE80">live</div><div class="metric-lbl">Realtime</div></div>
-        </div>
-        <div class="tags"><span class="tag">Python</span><span class="tag">PySpark</span><span class="tag">Next.js</span><span class="tag">Supabase</span><span class="tag tag-a">Vercel</span></div>
-        <div class="plinks">
-          <a href="https://github.com/atharvajoshi01/stocksense" target="_blank" class="plink"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>GitHub</a>
-          <a href="https://stocksense-ajoshs-projects.vercel.app" target="_blank" class="plink">Live Demo ↗</a>
-          <button class="rtog" onclick="toggleReadme(this)">View README ↓</button>
-        </div>
-      </div>
-      <div class="readme"><span style="color:#4ADE80"># stocksense</span> <span style="color:var(--muted2)">v0.1.0</span>
-
-<span style="color:var(--muted2)">$ python -m stocksense.run</span>
-→ Walk-forward CV across 24 panels · 3 folds · 14d horizon
-→ HGBT MAPE 21.9% vs Seasonal Naive 27.4%
-→ Selected HGBT on every panel · bias near zero
-<span style="color:#4ADE80">✓ 31 tests · Pandas/PySpark parity verified</span></div>
-    </div>
-
     <div class="pc fade-up" data-d="2">
       <div class="term-bar"><span class="tdot r"></span><span class="tdot a"></span><span class="tdot g"></span><span class="tbar-t">~/clarify · typescript</span></div>
       <div class="preview">
@@ -674,7 +667,7 @@ Supports: scikit-learn estimators | 10 modules | 46 tests
         </div>
       </div>
       <div class="pb">
-        <div class="pnum">PROJECT_03 / 05 · LIVE DEMO</div>
+        <div class="pnum">PROJECT_03 / 06 · LIVE DEMO</div>
         <div class="pname"><span>clar</span>ify</div>
         <div class="pdesc">Production LLM agent that turns a free-text brief into a validated BA artifact pack. Multi-step reasoning with a self-correcting clarification loop, typed IDs, RACI matrix, traceability. Llama 3.3 70B fallback chain via OpenRouter.</div>
         <div class="pbadges"><span class="bdg bc">LLM Agent</span><span class="bdg bg">Tool Calling</span></div>
@@ -694,6 +687,34 @@ Supports: scikit-learn estimators | 10 modules | 46 tests
 <span style="color:#4ADE80">✓ First-draft turnaround: ~6 hours → under 5 minutes</span></div>
     </div>
 
+    <div class="pc fade-up">
+      <div class="term-bar"><span class="tdot r"></span><span class="tdot a"></span><span class="tdot g"></span><span class="tbar-t">~/talent-rag · python3</span></div>
+      <div class="pb">
+        <div class="pnum">PROJECT_04 / 06</div>
+        <div class="pname"><span>talent</span>-rag</div>
+        <div class="pdesc">Production-grade RAG system for talent intelligence. Hybrid retrieval (dense plus sparse), cross-encoder reranking, and ensemble generation over a FAISS index, served through FastAPI with a Streamlit console.</div>
+        <div class="metrics-row">
+          <div class="metric-item"><div class="metric-val">Hybrid</div><div class="metric-lbl">Retrieval</div></div>
+          <div class="metric-item"><div class="metric-val" style="color:var(--accent2)">Cross-Enc</div><div class="metric-lbl">Reranking</div></div>
+          <div class="metric-item"><div class="metric-val">FAISS</div><div class="metric-lbl">Vector Store</div></div>
+          <div class="metric-item"><div class="metric-val" style="color:#4ADE80">MIT</div><div class="metric-lbl">Open Source</div></div>
+        </div>
+        <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">FAISS</span><span class="tag">Cross-Encoder</span><span class="tag">Streamlit</span><span class="tag tag-a">RAG</span></div>
+        <div class="plinks">
+          <a href="https://github.com/atharvajoshi01/talent-rag" target="_blank" class="plink"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>GitHub</a>
+          <button class="rtog" onclick="toggleReadme(this)">Close README ↑</button>
+        </div>
+      </div>
+      <div class="readme open"><span style="color:#4ADE80"># talent-rag</span> <span style="color:var(--muted2)">talent intelligence RAG</span>
+
+<span style="color:var(--muted2)">$ python -m talent_rag.query "senior ML engineer"</span>
+→ Hybrid retrieval: dense (FAISS) + sparse (BM25)
+→ Cross-encoder rerank → top-k candidates
+→ Ensemble generation → grounded, cited answer
+
+<span style="color:var(--muted2)">$ uvicorn app:api  ·  streamlit run ui.py</span>
+<span style="color:#4ADE80">✓ FastAPI service + Streamlit console</span></div>
+    </div>
     <div class="pc fade-up" data-d="3">
       <div class="term-bar"><span class="tdot r"></span><span class="tdot a"></span><span class="tdot g"></span><span class="tbar-t">~/agenteval · python3</span></div>
       <div class="preview">
@@ -701,7 +722,7 @@ Supports: scikit-learn estimators | 10 modules | 46 tests
         <div class="preview-tag static">CLI Framework</div>
       </div>
       <div class="pb">
-        <div class="pnum">PROJECT_04 / 05</div>
+        <div class="pnum">PROJECT_05 / 06</div>
         <div class="pname"><span>agent</span>eval</div>
         <div class="pdesc">AI agent evaluation framework with AgentRunner, LLM-as-judge scoring (OpenAI + Anthropic), CLI, safety checks for PII & prompt injection, multi-format export.</div>
         <div class="pbadges"><span class="bdg bc">LLM-as-judge</span><span class="bdg bg">Safety Checks</span></div>
@@ -728,7 +749,7 @@ Supports: scikit-learn estimators | 10 modules | 46 tests
         <div class="preview-tag static">Backtest Engine</div>
       </div>
       <div class="pb">
-        <div class="pnum">PROJECT_05 / 05</div>
+        <div class="pnum">PROJECT_06 / 06</div>
         <div class="pname"><span>crypto</span>-stat-arb</div>
         <div class="pdesc">Statistical arbitrage engine. Engle-Granger cointegration, Johansen basket trading, Kalman filter hedge ratios, walk-forward backtesting, regime detection, paper trading via Kraken API.</div>
         <div class="pbadges"><span class="bdg ba">Kraken API</span><span class="bdg bc">Kalman Filter</span></div>
